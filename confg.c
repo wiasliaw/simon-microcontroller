@@ -1,8 +1,9 @@
 #include "xc.h"
 
 void Config_Init() {
-    RCONbits.IPEN = 0x1;
-    INTCONbits.GIE = 0x1;
-    INTCONbits.INT0IE = 0x1;
-    INTCONbits.INT0IF = 0x0;
+    RCONbits.IPEN = 1;
+    INTCONbits.GIE = 1;
+    INTCONbits.INT0IE = 1;
+    INTCONbits.INT0IF = 0;
+    ADCON1bits.PCFG = 15;
 }
