@@ -10,7 +10,7 @@
         LED_Off(ID);
 
 #define GAME_RESET() \
-        array_init(questionArray, inputArray); \
+        array_init(questionArr, inputArr); \
         questionCtr = 0; \
         inputCtr = 0;
 

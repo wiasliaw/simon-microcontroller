@@ -1,6 +1,7 @@
 #include "xc.h"
 
 void Config_Init() {
+    OSCCONbits.IRCF = 7;
     RCONbits.IPEN = 1;
     INTCONbits.GIE = 1;
     INTCONbits.INT0IE = 1;

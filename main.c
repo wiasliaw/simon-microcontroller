@@ -101,7 +101,7 @@ int main(void) {
     LED_Init();
 
     // Set up arrays
-    array_init(questionArray, inputArray);
+    array_init(questionArr, inputArr);
 
     while (1) {
     }
