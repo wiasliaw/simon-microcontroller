@@ -24,6 +24,7 @@ void Config_Init();
  * - OSC
  * - WDT
  * - LVP
+ * - PBADEN
  */
 
 // CONFIG1H

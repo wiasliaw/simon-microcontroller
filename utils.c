@@ -18,6 +18,7 @@ void array_init(int *quesArr, int *inpArr){
 void question_show(int *q, int ptr) {
     for(int i = 0; i <= ptr; i++) {
         LED_BUZZER_SHOW(q[i], 500);
+        __delay_ms(100);
     }
 }
 
