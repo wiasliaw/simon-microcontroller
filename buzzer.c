@@ -9,13 +9,13 @@ void Buzzer_Init(void){
     return;
 };
 void Buzzer_On(int buzzer_ID){
-    int buzzerPos = 1 << (buzzer_ID - 1);
+    int buzzerPos = 1 << buzzer_ID;
     LATC = (LATC | buzzerPos);
     return;
 };
 
 void Buzzer_Off(int buzzer_ID){
-    int buzzerPos = 1 << (buzzer_ID - 1);
+    int buzzerPos = 1 << buzzer_ID;
     LATC = (LATC ^ buzzerPos);
     return;
 };

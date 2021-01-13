@@ -3,24 +3,24 @@
 #include "led.h"
 #include "xc.h"
 
-void ques_init(int *q) {
+void array_init(int *quesArr, int *inpArr){
     srand(time(NULL));
-    for(int i=0; i<10; i++) {
-        q[i] = rand()%4;
+    for(int i = 0; i < QUESTION_LIMIT; i++){
+        quesArr[i] = rand()%4;
+        inpArr[i] = -1;
+    }
+    return;
+}
+
+void question_show(int *q, int ptr) {
+    for(int i = 0; i <= ptr; i++) {
+        LED_BUZZER_SHOW(q[i], 500);
     }
 }
 
-int ques_check(int *q, int ptr, int src) {
-    if(q[ptr] == src) {
-        ptr++;
+int validityCheck(int *quesArr, int *inpArr, int inpCtr){
+    if(quesArr[inpCtr] == inpArr[inpCtr])
         return 1;
-    }
-    return 0;
-}
-
-void ques_next(int *q, int ptr) {
-    for(int i=0; i<ptr; i++) {
-        LED_On(q[i]);
-        LED_Off(q[i]);
-    }
+    else
+        return 0;
 }

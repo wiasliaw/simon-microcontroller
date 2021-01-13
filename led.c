@@ -10,12 +10,12 @@ void LED_Init() {
 };
 
 void LED_On(int led_ID){
-    int ledPos = 1 << (led_ID - 1);
+    int ledPos = 1 << led_ID;
     LATD = (LATD | ledPos);
     return;
 };
 void LED_Off(int led_ID){
-    int ledPos = 1 << (led_ID - 1);
+    int ledPos = 1 << led_ID;
     LATD = (LATD ^ ledPos);
     return;
 };
